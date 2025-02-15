@@ -1,5 +1,6 @@
 local map = vim.keymap.set
 
+
 -- leader e to toggle side file
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle Explorer" })
 -- leader h and l to switch between files and side bar
