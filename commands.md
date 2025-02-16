@@ -38,3 +38,7 @@
 | View commit log     | `l`             | `git log`              |
 | View file diff      | `d`             | `git diff`             |
 
+
+
+- size of the file
+-- ctrl k

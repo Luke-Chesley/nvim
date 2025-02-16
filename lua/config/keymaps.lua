@@ -21,19 +21,9 @@ map("n", "<leader>mp", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Markdown Prev
 -- undo in insert mode
 map("i", "<C-z>","<C-o>u", {noremap = true, silent = true})
 
--- git commands
--- Git push
-map("n", "<leader>gp", ":Git push<CR>", { desc = "Git Push" })
--- Git pull
-
-
-
-
-map("n", "<leader>gl", function()
-  vim.cmd("Git pull")
-  vim.notify("Git Pull complete", vim.log.levels.INFO)
-end, { desc = "Git Pull with status" })
-
+-- home jumps to first non blank char
+vim.keymap.set("i", "<Home>", "<C-o>^", { noremap = true, silent = true })
+vim.keymap.set({"n", "v"}, "<Home>", "^", { noremap = true, silent = true })
 
 
 
@@ -130,5 +120,5 @@ local function open_floating_terminal(cmd)
 end
 
 vim.keymap.set("n", "<leader>y", function() open_floating_terminal("yazi") end, { desc = "Open Yazi in floating window" })
-vim.keymap.set("n", "<leader>lg", function() open_floating_terminal("lazygit") end, { desc = "Open lazygit in floating window" })
+vim.keymap.set("n", "<leader>gg", function() open_floating_terminal("lazygit") end, { desc = "Open lazygit in floating window" })
 
