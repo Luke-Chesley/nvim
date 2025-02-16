@@ -94,3 +94,65 @@ vim.keymap.set("n", "<leader>ll", function()
   end
 end, { noremap = true, silent = true })
 
+
+-- open yazi
+local function open_yazi()
+  local width = math.floor(vim.o.columns * 0.8)
+  local height = math.floor(vim.o.lines * 0.8)
+  local row = math.floor((vim.o.lines - height) / 2)
+  local col = math.floor((vim.o.columns - width) / 2)
+
+  local opts = {
+    style = "minimal",
+    relative = "editor",
+    width = width,
+    height = height,
+    row = row,
+    col = col,
+    border = "rounded",
+  }
+
+  -- Create a new buffer and window
+  local buf = vim.api.nvim_create_buf(false, true) -- No file, scratch buffer
+  local win = vim.api.nvim_open_win(buf, true, opts) -- Open floating window
+
+  -- Open terminal in the buffer running Yazi
+  vim.api.nvim_cmd({ cmd = "terminal", args = { "yazi" } }, {})
+
+  -- Enter insert mode so Yazi is interactive immediately
+  vim.cmd("startinsert")
+end
+
+vim.keymap.set("n", "<leader>y", open_yazi, { desc = "Open Yazi in floating window" })
+
+--open lazygit
+local function open_lazygit()
+  local width = math.floor(vim.o.columns * 0.8)
+  local height = math.floor(vim.o.lines * 0.8)
+  local row = math.floor((vim.o.lines - height) / 2)
+  local col = math.floor((vim.o.columns - width) / 2)
+
+  local opts = {
+    style = "minimal",
+    relative = "editor",
+    width = width,
+    height = height,
+    row = row,
+    col = col,
+    border = "rounded",
+  }
+
+  -- Create a new buffer and window
+  local buf = vim.api.nvim_create_buf(false, true) -- No file, scratch buffer
+  local win = vim.api.nvim_open_win(buf, true, opts) -- Open floating window
+
+  -- Open terminal in the buffer running Yazi
+  vim.api.nvim_cmd({ cmd = "terminal", args = { "lazygit" } }, {})
+
+  -- Enter insert mode so Yazi is interactive immediately
+  vim.cmd("startinsert")
+end
+
+vim.keymap.set("n", "<leader>lg", open_lazygit, { desc = "Open lazygit in floating window" })
+
+
