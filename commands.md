@@ -42,3 +42,8 @@
 
 - size of the file
 -- ctrl k
+
+
+- create gh repo from terminal
+
+gh repo create my-repo-name --public --source=. --remote=origin
