@@ -73,7 +73,7 @@ map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { noremap = true, silent 
 
 local diagnostics_enabled = true
 
-vim.keymap.set("n", "<leader>ll", function()
+vim.keymap.set("n", "<leader>pl", function()
   diagnostics_enabled = not diagnostics_enabled
   if diagnostics_enabled then
     vim.diagnostic.enable()
