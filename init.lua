@@ -78,3 +78,14 @@ vim.diagnostic.config({
 })
 
 
+
+-- pdf 
+vim.api.nvim_create_autocmd("BufReadPost", {
+  pattern = {"*.pdf"},
+  callback = function()
+    local filepath = vim.fn.expand("%:p")
+    vim.fn.jobstart({ "zathura", filepath }, { detach = true })
+    vim.cmd("bd!")  -- close the buffer so you don't see binary data
+  end,
+})
+

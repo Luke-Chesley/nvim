@@ -55,3 +55,5 @@ svd
 knn
 float32
 quantize
+vec
+dataset
