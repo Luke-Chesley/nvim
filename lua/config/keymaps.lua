@@ -46,6 +46,7 @@ map("v", "<C-S-c>", '"+y', { noremap = true, silent = true })
 
 -- hover information from lsp
 map("n", "Kh", vim.lsp.buf.hover, { noremap = true, silent = true })
+
 -- jump to method def
 map("n", "Kd", vim.lsp.buf.definition, { noremap = true, silent = true })
 

@@ -47,3 +47,12 @@
 - create gh repo from terminal
 
 gh repo create my-repo-name --public --source=. --remote=origin
+
+
+- goto definition
+
+Kd
+
+- jump back to file from Kd
+
+ctrl o
