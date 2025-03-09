@@ -56,3 +56,8 @@ Kd
 - jump back to file from Kd
 
 ctrl o
+
+
+- render json in terminal 
+
+file.txt | jq

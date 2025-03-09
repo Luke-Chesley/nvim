@@ -68,3 +68,4 @@ TorchHMFConfig
 rescale
 init
 faiss
+pretrained

@@ -70,6 +70,9 @@ map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { noremap = true, silent 
  -- Delete highlights after search with esc
  vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>", { noremap = true, silent = true })
 
+-- toggle spell check
+
+vim.keymap.set('n', '<leader>pL', ':set spell!<CR>', { noremap = true, silent = true })
  -- turn off lsp
 
 local diagnostics_enabled = true
