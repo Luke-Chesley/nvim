@@ -61,3 +61,12 @@ ctrl o
 - render json in terminal 
 
 file.txt | jq
+
+
+- toggle lsp
+
+leader pl
+
+- toggle spell check 
+
+leader pL

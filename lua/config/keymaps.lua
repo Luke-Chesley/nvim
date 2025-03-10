@@ -126,3 +126,5 @@ end
 vim.keymap.set("n", "<leader>y", function() open_floating_terminal("yazi") end, { desc = "Open Yazi in floating window" })
 vim.keymap.set("n", "<leader>gg", function() open_floating_terminal("lazygit") end, { desc = "Open lazygit in floating window" })
 
+
+map("n", "<leader>sh", vim.lsp.buf.signature_help, { noremap = true, silent = true, desc = "Show signature help" })
